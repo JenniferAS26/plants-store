@@ -1,16 +1,94 @@
+button {
+  background: none;
+  border-style: none;
+}
+
 html {
   font-size: 62.5%;
 }
 
-button {
-  border: none;
-  background-color: transparent;
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #FFFFFF;
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
 }
 
 header {
+  padding: 20px 46px;
+  height: 50px;
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+header .left-navbar {
+  width: 560px;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 header .left-navbar span {
   text-transform: uppercase;
   font-family: "Quella", sans-serif;
+  font-size: 2.6rem;
+}
+header .left-navbar a {
+  font-size: 1.8rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #8e8e8e;
+}
+header .left-navbar a:hover {
+  color: #000000;
+}
+header .right-navbar {
+  width: 200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+header .right-navbar button {
+  width: 45px;
+  height: 30px;
+  cursor: pointer;
+}
+header .right-navbar .menu {
+  border-left-style: solid;
+  width: 70px;
+}
+
+main {
+  width: auto;
+  height: auto;
+  padding: 0 46px;
+}
+main .hero {
+  height: 100%;
+  background-color: #C1DCDc;
+  border-radius: 24px;
+  padding-top: 30px;
+  padding-left: 25px;
+  padding-right: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+}
+main .hero .hero-left {
+  display: grid;
+}
+main .hero .hero-left .info-wrapper h1 {
+  font-size: 6.4rem;
+  font-weight: bolder;
+  line-height: 0.9;
+  letter-spacing: -2px;
+  margin: 0;
 }/*# sourceMappingURL=main.css.map */

@@ -1,23 +1,98 @@
 $primary-color: #C1DCDc;
+$secondary-color: #FFFFFF;
 $primary-text-color: #8e8e8e;
 $font-stack: 'Poppins', sans-serif;
 $font-logo: 'Quella', sans-serif;
+
+@mixin flexCenter($direction, $content, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $content;
+    align-items: $align;
+}
+
+button {
+    background: none;
+    border-style: none;
+}
+
 
 html {
     font-size: 62.5%;
 }
 
-button {
-    border: none;
-    background-color: transparent;
+body {
+    margin: 0;
+    padding: 0;
+    background-color: $secondary-color;
+    font-family: $font-stack;
+}
+
+a {
+    text-decoration: none;
 }
 
 header {
-    display: flex;
+    padding: 20px 46px;
+    height: 50px;
+    @include flexCenter(row, space-between, center);
     .left-navbar {
+        width: 560px;
+        height: auto;
+        @include flexCenter(row, space-between, center);
         span {
             text-transform: uppercase;
             font-family: $font-logo;
+            font-size: 2.6rem;
+        }
+        a {
+            font-size: 1.8rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            color: $primary-text-color;
+            &:hover {
+                color: #000000;
+            }
+        }
+    }
+    .right-navbar {
+        width: 200px;
+        @include flexCenter(row, space-between, center);
+        button {
+            width: 45px;
+            height: 30px;
+            cursor: pointer;
+        }
+        .menu {
+            border-left-style: solid;
+            width: 70px;  
+        }
+    }
+}
+
+main {
+    width: auto; 
+    height: auto;
+    padding: 0 46px;
+    .hero {
+        height: 100%;
+        background-color: $primary-color;
+        border-radius: 24px;
+        padding-top: 30px;
+        padding-left: 25px;
+        padding-right: 25px;
+        @include flexCenter(row, space-between, stretch);
+        .hero-left {
+            display: grid;
+            .info-wrapper {
+                h1 {
+                    font-size: 6.4rem;
+                    font-weight: bolder;
+                    line-height: 0.9;
+                    letter-spacing: -2px;
+                    margin: 0;
+                }
+            }
         }
     }
 }
