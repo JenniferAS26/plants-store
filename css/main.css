@@ -18,6 +18,10 @@ a {
   text-decoration: none;
 }
 
+p {
+  margin: 0;
+}
+
 header {
   padding: 20px 46px;
   height: 50px;
@@ -71,7 +75,7 @@ main {
   padding: 0 46px;
 }
 main .hero {
-  height: 100%;
+  height: 440px;
   background-color: #C1DCDc;
   border-radius: 24px;
   padding-top: 30px;
@@ -83,12 +87,97 @@ main .hero {
   align-items: stretch;
 }
 main .hero .hero-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+main .hero .hero-left .info-wrapper {
+  width: 420px;
+  height: 220px;
   display: grid;
+  justify-items: start;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "title title" "species customers";
 }
 main .hero .hero-left .info-wrapper h1 {
-  font-size: 6.4rem;
+  font-size: 6.2rem;
   font-weight: bolder;
   line-height: 0.9;
   letter-spacing: -2px;
   margin: 0;
+  grid-area: title;
+}
+main .hero .hero-left .info-wrapper .species, main .hero .hero-left .info-wrapper .customers {
+  grid-area: species;
+  align-self: end;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+main .hero .hero-left .info-wrapper .species .number, main .hero .hero-left .info-wrapper .customers .number {
+  font-size: 3.2rem;
+  font-weight: 500;
+}
+main .hero .hero-left .info-wrapper .species .number span, main .hero .hero-left .info-wrapper .customers .number span {
+  font-size: 2.8rem;
+}
+main .hero .hero-left .info-wrapper .species .text, main .hero .hero-left .info-wrapper .customers .text {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+main .hero .hero-left .info-wrapper .customers {
+  grid-area: customers;
+}
+main .hero .hero-left .search {
+  height: 200px;
+  padding: 50px 0;
+  display: flex;
+  position: relative;
+}
+main .hero .hero-left .search input {
+  width: 400px;
+  height: 26px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  padding: 15px;
+  font-size: 1.8rem;
+  z-index: 2;
+}
+main .hero .hero-left .search button {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  z-index: 3;
+  position: absolute;
+  right: 10px;
+  top: 59px;
+  background-color: #C1DCDc;
+}
+main .hero .hero-right {
+  position: relative;
+}
+main .hero .hero-right img {
+  position: absolute;
+  bottom: 0;
+  right: -30px;
+  z-index: 5;
+}
+main .hero .hero-right .shapes {
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+  width: 420px;
+  height: 400px;
+  background-color: #000000;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  z-index: 1;
 }/*# sourceMappingURL=main.css.map */
