@@ -11,28 +11,25 @@ $medium-weight: 500;
     justify-content: $content;
     align-items: $align;
 }
-
-button {
-    background: none;
-    border-style: none;
-}
-
-
-html {
-    font-size: 62.5%;
-}
-
 body {
     margin: 0;
     padding: 0;
     background-color: $secondary-color;
     font-family: $font-stack;
+    overflow-x: hidden;
 }
-
+button {
+    background: none;
+    border-style: none;
+}
+html {
+    font-size: 62.5%;
+}
 a {
     text-decoration: none;
+    color: $primary-text-color;
 }
-p {
+p, h4, h2 {
     margin: 0;
 }
 
@@ -53,7 +50,6 @@ header {
             font-size: 1.8rem;
             font-weight: $medium-weight;
             letter-spacing: 1px;
-            color: $primary-text-color;
             &:hover {
                 color: #000000;
             }
@@ -77,11 +73,12 @@ header {
 main {
     width: auto; 
     height: auto;
-    padding: 0 46px;
+    //padding: 0 46px;
     .hero {
         height: 440px;
         background-color: $primary-color;
         border-radius: 24px;
+        margin: 0 46px;
         padding-top: 30px;
         padding-left: 25px;
         padding-right: 25px;
@@ -178,6 +175,197 @@ main {
                 border-bottom-left-radius: 50%;
                 z-index: 1;
             }
+        }
+    }
+    .market-section {
+        margin: 0 46px;
+        margin-top: 40px;
+        width: auto;
+        display: grid;
+        grid-template-columns: 180px auto;
+        grid-template-rows: auto;
+        .product-container {
+            padding: 20px;
+            h2 {
+                font-size: 2.2rem;
+                font-weight: bold;
+                line-height: 1;
+            }
+            p {
+                color: $primary-text-color;
+                padding: 15px 0;
+                font-size: 1.3rem;
+                line-height: 1;
+            }
+            button {
+                cursor: pointer;
+                width: 120px;
+                height: 32px;
+                background-color: $primary-color;
+                border-radius: 8px;
+                @include flexCenter(row, space-around, center);
+                a {
+                    color: #000000;
+                    font-size: 1.4rem;
+                    font-weight: $medium-weight;
+                    img {
+                        padding-left: 3px;
+                    }
+                }
+            }
+        }
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            justify-items: end;
+            align-items: center;
+            .cards {
+                width: 200px;
+                height: 330px;
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+                h4 {
+                    font-size: 1.8rem;
+                    font-weight: $medium-weight;
+                }
+                span {
+                    font-size: 1.7rem;
+                    font-weight: $medium-weight;
+                    color: $primary-text-color;
+                }
+            }
+        }
+    }
+    .aboutus-section {
+        margin: 0 46px;
+        margin-top: 40px;
+        width: auto;
+        @include flexCenter(column, center, center);
+        h2 {
+            font-size: 2.7rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+        p {
+            font-size: 1.8rem;
+            font-weight: $medium-weight;
+            color: $primary-text-color;
+        }
+        .service-container {
+            margin: 40px;
+            //width: 100%;
+            height: 150px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto;
+            gap: 50px;
+            .service-content {
+                display: grid;
+                justify-items: center;
+                align-items: center;
+                div {
+                    width: 70px;
+                    height: 70px;
+                    border-radius: 50%;
+                    background-color: $primary-color;
+                    display: grid;
+                    justify-items: center;
+                    align-items: center;
+                }
+                h3 {
+                    font-size: 1.6rem;
+                    font-weight: bold;
+                }
+                p {
+                    font-size: 1.4rem;
+                    font-weight: $medium-weight;
+                    color: $primary-text-color;
+                    text-align: center;
+                    line-height: 1.2;
+                }
+            }
+        }
+    }
+    .categories-section {
+        margin-top: 100px;
+        width: auto;
+        @include flexCenter(column, center, center);
+        h2 {
+            font-size: 2.7rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+        p {
+            font-size: 1.8rem;
+            font-weight: $medium-weight;
+            color: $primary-text-color;
+        }
+        .content-wrapper {
+            margin-top: 110px;
+            background-color: $primary-color;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            justify-items: center;
+            .content-card {
+                width: 240px;
+                height: 500px;
+                @include flexCenter(column, flex-end, center);
+                position: relative;
+                .img-plant {
+                    width: 100%;
+                    height: auto;
+                    object-fit: cover;
+                }
+                .left-edge, .right-edge {
+                    position: absolute;
+                    top: -90px;
+                }
+                h4 {
+                    font-size: 1.7rem;
+                    letter-spacing: 1.5px;
+                }
+                .description-content {
+                    position: absolute;
+                    bottom: 210px;
+                    text-align: center;
+                }
+            }
+            .middle-edge {
+                margin: 25px 0;
+                justify-content: space-between;
+                p {
+                    font-size: 1.5rem;
+                    text-align: center;
+                    line-height: 1;
+                }
+                button {
+                    @include flexCenter(row, center, center);
+                    width: 150px;
+                    height: 40px;
+                    border-radius: 8px;
+                    background-color: #FFFFFF;
+                    a {
+                        font-size: 1.5rem;
+                        font-weight: bold;
+                        color: #000000;
+                        img {
+                            padding-left: 7px;
+                        }
+                    }    
+                }
+            }
+        }
+    }
+    .testimonial-section {
+        margin: 60px 46px;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 150px 1fr;
+        .testimonial-card__container {
+            display: flex;
         }
     }
 }

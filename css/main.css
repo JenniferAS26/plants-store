@@ -1,3 +1,11 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #FFFFFF;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
 button {
   background: none;
   border-style: none;
@@ -7,18 +15,12 @@ html {
   font-size: 62.5%;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  background-color: #FFFFFF;
-  font-family: "Poppins", sans-serif;
-}
-
 a {
   text-decoration: none;
+  color: #8e8e8e;
 }
 
-p {
+p, h4, h2 {
   margin: 0;
 }
 
@@ -47,7 +49,6 @@ header .left-navbar a {
   font-size: 1.8rem;
   font-weight: 500;
   letter-spacing: 1px;
-  color: #8e8e8e;
 }
 header .left-navbar a:hover {
   color: #000000;
@@ -72,12 +73,12 @@ header .right-navbar .menu {
 main {
   width: auto;
   height: auto;
-  padding: 0 46px;
 }
 main .hero {
   height: 440px;
   background-color: #C1DCDc;
   border-radius: 24px;
+  margin: 0 46px;
   padding-top: 30px;
   padding-left: 25px;
   padding-right: 25px;
@@ -180,4 +181,210 @@ main .hero .hero-right .shapes {
   border-top-right-radius: 50%;
   border-bottom-left-radius: 50%;
   z-index: 1;
+}
+main .market-section {
+  margin: 0 46px;
+  margin-top: 40px;
+  width: auto;
+  display: grid;
+  grid-template-columns: 180px auto;
+  grid-template-rows: auto;
+}
+main .market-section .product-container {
+  padding: 20px;
+}
+main .market-section .product-container h2 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  line-height: 1;
+}
+main .market-section .product-container p {
+  color: #8e8e8e;
+  padding: 15px 0;
+  font-size: 1.3rem;
+  line-height: 1;
+}
+main .market-section .product-container button {
+  cursor: pointer;
+  width: 120px;
+  height: 32px;
+  background-color: #C1DCDc;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+main .market-section .product-container button a {
+  color: #000000;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+main .market-section .product-container button a img {
+  padding-left: 3px;
+}
+main .market-section .card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: end;
+  align-items: center;
+}
+main .market-section .card-container .cards {
+  width: 200px;
+  height: 330px;
+}
+main .market-section .card-container .cards img {
+  width: 100%;
+  height: auto;
+}
+main .market-section .card-container .cards h4 {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+main .market-section .card-container .cards span {
+  font-size: 1.7rem;
+  font-weight: 500;
+  color: #8e8e8e;
+}
+main .aboutus-section {
+  margin: 0 46px;
+  margin-top: 40px;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .aboutus-section h2 {
+  font-size: 2.7rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+main .aboutus-section p {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #8e8e8e;
+}
+main .aboutus-section .service-container {
+  margin: 40px;
+  height: 150px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: 50px;
+}
+main .aboutus-section .service-container .service-content {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+main .aboutus-section .service-container .service-content div {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #C1DCDc;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+main .aboutus-section .service-container .service-content h3 {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+main .aboutus-section .service-container .service-content p {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #8e8e8e;
+  text-align: center;
+  line-height: 1.2;
+}
+main .categories-section {
+  margin-top: 100px;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .categories-section h2 {
+  font-size: 2.7rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+main .categories-section p {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #8e8e8e;
+}
+main .categories-section .content-wrapper {
+  margin-top: 110px;
+  background-color: #C1DCDc;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+}
+main .categories-section .content-wrapper .content-card {
+  width: 240px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+}
+main .categories-section .content-wrapper .content-card .img-plant {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .categories-section .content-wrapper .content-card .left-edge, main .categories-section .content-wrapper .content-card .right-edge {
+  position: absolute;
+  top: -90px;
+}
+main .categories-section .content-wrapper .content-card h4 {
+  font-size: 1.7rem;
+  letter-spacing: 1.5px;
+}
+main .categories-section .content-wrapper .content-card .description-content {
+  position: absolute;
+  bottom: 210px;
+  text-align: center;
+}
+main .categories-section .content-wrapper .middle-edge {
+  margin: 25px 0;
+  justify-content: space-between;
+}
+main .categories-section .content-wrapper .middle-edge p {
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 1;
+}
+main .categories-section .content-wrapper .middle-edge button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 40px;
+  border-radius: 8px;
+  background-color: #FFFFFF;
+}
+main .categories-section .content-wrapper .middle-edge button a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000000;
+}
+main .categories-section .content-wrapper .middle-edge button a img {
+  padding-left: 7px;
+}
+main .testimonial-section {
+  margin: 60px 46px;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 150px 1fr;
+}
+main .testimonial-section .testimonial-card__container {
+  display: flex;
 }/*# sourceMappingURL=main.css.map */
