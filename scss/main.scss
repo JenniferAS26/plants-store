@@ -1,0 +1,23 @@
+$primary-color: #C1DCDc;
+$primary-text-color: #8e8e8e;
+$font-stack: 'Poppins', sans-serif;
+$font-logo: 'Quella', sans-serif;
+
+html {
+    font-size: 62.5%;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+}
+
+header {
+    display: flex;
+    .left-navbar {
+        span {
+            text-transform: uppercase;
+            font-family: $font-logo;
+        }
+    }
+}
